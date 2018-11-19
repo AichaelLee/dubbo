@@ -52,11 +52,11 @@ public class Main {
   }
 
   @GetMapping(value = "/vpn")
-  String concurrency(String threadId) throws Exception {
-    if(threadId.equals("10") || threadId.equals("20")){
+  String concurrency(String collegeName,String stuName) throws Exception {
+    if(stuName.startsWith("李四")){
       Thread.sleep(1000);
     }
-    return "the threadId is : "+threadId+"  and time: "+ new Timestamp(System.currentTimeMillis());
+    return collegeName+" 学校的 : "+stuName+" 验证账号成功! 登录时间为:  "+ new Timestamp(System.currentTimeMillis());
   }
 
   @RequestMapping("/db")
