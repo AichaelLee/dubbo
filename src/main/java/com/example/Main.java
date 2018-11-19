@@ -52,7 +52,10 @@ public class Main {
   }
 
   @GetMapping(value = "/vpn")
-  String concurrency(String threadId) {
+  String concurrency(String threadId) throws Exception {
+    if(threadId.equals("10") || threadId.equals("20")){
+      Thread.sleep(10000);
+    }
     return "the threadId is : "+threadId+"  and time: "+ new Timestamp(System.currentTimeMillis());
   }
 
