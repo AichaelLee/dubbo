@@ -53,7 +53,7 @@ public class Main {
 
   @GetMapping(value = "/vpn")
   String concurrency(String collegeName,String stuName) throws Exception {
-    if(stuName.startsWith("李四")){
+    if(stuName.equals("李四A0") || stuName.equals("李四B0") || stuName.equals("李四C0")){
       Thread.sleep(1000);
     }
     return collegeName+" 学校的 : "+stuName+" 验证账号成功! 登录时间为:  "+ new Timestamp(System.currentTimeMillis());
