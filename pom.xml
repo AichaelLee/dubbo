@@ -96,6 +96,12 @@
       <artifactId>jackson-mapper-asl</artifactId>
       <version>1.9.12</version>
     </dependency>
+    <!-- Spring Boot Dubbo 依赖 -->
+    <dependency>
+      <groupId>io.dubbo.springboot</groupId>
+      <artifactId>spring-boot-starter-dubbo</artifactId>
+      <version>1.0.0</version>
+    </dependency>
   </dependencies>
 
   <build>
